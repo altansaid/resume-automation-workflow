@@ -26,11 +26,8 @@ Slack Trigger → Job Description → OpenAI Prompt → Resume Generator (LaTeX)
 GitHub Upload → GitHub Actions Build → PDF Output → Slack Notification
 ```
 
-> 📸 **Workflow Image Placeholder:**  
-> Replace this with your actual workflow diagram later:
->
 > ```markdown
-> ![Workflow Diagram](./workflow-diagram.png)
+> ![Workflow Diagram](./assets/workflow-diagram.png)
 > ```
 
 ---
