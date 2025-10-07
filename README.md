@@ -71,82 +71,10 @@ GitHub Actions compiles LaTeX → PDF and sends it back to Slack.
 
 ---
 
-## 🛠️ Setup Guide
-
-> ⚠️ **Important:** Before running the workflow, recreate all credentials securely inside n8n (do not include them in JSON).
-
-### Steps
-
-1. **Install n8n**
-
-   ```bash
-   npm install -g n8n
-   n8n start
-   ```
-
-2. **Import the Workflow**
-   In the n8n dashboard, click **Import Workflow** and upload the JSON file.
-
-3. **Create Credentials**
-
-   - OpenAI API Key
-   - Slack Bot Token
-   - GitHub Personal Access Token
-
-4. **Link Slack Command**
-   Connect your custom Slack command (e.g., `/tailor-resume`) to the webhook trigger.
-
-5. **Test It**
-   Send a message in Slack to generate a job-specific tailored resume.
-
----
-
-## 📦 Output Files
-
-- **`resume.tex`** – AI-refined LaTeX resume source file.
-- **`resume.pdf`** – Compiled, job-tailored resume PDF.
-
----
-
-## 📊 Example Usage
-
-1. In Slack, send:
-
-   ```
-   /tailor-resume Software Developer @ Nokia Canada
-   ```
-
-2. The workflow will:
-   - Parse the job description
-   - Generate custom bullet points
-   - Commit the LaTeX file
-   - Deliver the final PDF via Slack
-
----
-
-## 🧠 Future Enhancements
-
-- ✅ Multiple project weighting
-- ✅ Support for Gemini / Claude models
-- 🔜 Web dashboard (Supabase + Next.js)
-- 🔜 Discord integration
-- 🔜 Automatic performance metric extraction
-
----
-
-## ⚖️ Security Guidelines
-
-- Never commit API keys or tokens directly into JSON files.
-- Always use **n8n Credentials** or environment variables.
-- Run `git-secrets` or `trufflehog` before pushing commits.
-- If credentials were ever exposed, **rotate tokens immediately.**
-
----
-
 ## 👨‍💻 Author
 
 **Muhammed Said Altan**  
-Web Developer & Automation Engineer  
+Software Developer
 🌐 [saidaltan.com](https://saidaltan.com)  
 📧 altansaid13@gmail.com  
 💼 [LinkedIn](https://www.linkedin.com/in/saidaltan)
